@@ -1,0 +1,35 @@
+
+.column 
+{
+  float: left;
+  width: 50%;
+}
+
+
+.Bees:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.BeeImageLeft
+{
+	float: left;
+	margin: 10px;
+}	
+	
+	
+.BeeImageRight 
+{
+	float: right;
+	margin: 10px;
+}
+	
+	
+.BeeImageCenter
+{
+	float: center;
+	margin: 5px;
+}
