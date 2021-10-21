@@ -1,0 +1,27 @@
+p
+{
+	text-align: left;
+	float:center;
+    background-color: yellow; 
+	margin-left: 10%;
+	margin-right: 10%;
+	border: 3px solid #500;
+	padding:10px;
+}
+h1
+{
+	font-size: 30px;
+	text-align: left;
+	margin: 30px;
+	text-decoration: underline;
+}
+img {
+	float: center;
+	margin-left: 5%;
+	margin-right: 5%;
+    border: 20px solid #555;
+}
+a:hover {
+  color: gray ;
+  background-color: #cfc ;
+}
