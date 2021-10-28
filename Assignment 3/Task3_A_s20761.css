@@ -1,0 +1,107 @@
+
+img#rotatedImg{
+	margin-top: 75px;
+	transform:rotate(10deg);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+	height: 300px;
+  border:2px solid #fff;
+  box-shadow: 10px 10px 5px #ccc;
+  border-radius:25px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center; 
+}
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.main {
+  text-align: left;
+}
+.main2 {
+  text-align: left;
+}
+.main3 {
+  text-align: left;
+}
+.main4 {
+  text-align: left;
+}
+.main5 {
+  text-align: left;
+}
+
+
+@media all and (min-width: 200px) {
+  .aside { flex: 1 0 0; }
+  .aside-1 { order: 2; }
+  .footer{order:8;}
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .main2 { flex: 3 0px;}
+  .main3 { flex: 3 0px;}
+  .main4 { flex: 3 0px;}
+  .main5 { flex: 3 0px;}
+  
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .main2 { order: 3; }
+  .main3 { order: 4; }
+  .main4 { order: 5; }
+  .main5 { order: 6; }
+  .footer  { order: 8; }
+}
+
+
+.pquote {
+    float: left;
+    width: 100px;
+    background: #bff;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0 10px 10px 0;
+}
+.pquote2 {
+    float: right;
+    width: 100px;
+    background: #bff;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0 10px 10px 0;
+}
+img#pimage
+{
+	float: left;
+    width: 100px;
+	height:100px;
+    padding: 5px;
+    margin: 0 10px 10px 0;
+}
+img#pimageRight
+{
+	float: right;
+    width: 150px;
+	height:100px;
+    padding: 5px;
+    margin: 0 10px 10px 0;
+}
+
+blockquote {
+    margin: 0; 
+}
