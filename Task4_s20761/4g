@@ -1,7 +1,0 @@
-var argtype = function(something) {
-  return typeof something;
-}
-
-console.log(argtype(11));
-console.log(argtype('test'));
-console.log(argtype(true));

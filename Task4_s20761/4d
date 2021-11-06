@@ -1,8 +1,0 @@
-var alphabetical = function(str) {
-  str = str.toLowerCase();
-  str = str.split("").sort().join("");
-  
-  return str;
-}
-
-console.log(alphabetical("TestingXX"));
