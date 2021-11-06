@@ -1,0 +1,46 @@
+var secondPlace = function(nums) {
+  var highest;
+  var secondhighest;
+  var lowest;
+  var secondlowest;
+  
+  highest = nums[0];
+  secondhighest = nums[0];
+  lowest = nums[0];
+  secondlowest = nums[0];
+  
+  for(var i = 0; i < nums.length; i++)
+    {
+      //second highest
+      if(nums[i] > secondhighest)
+        {
+          if(nums[i] > highest)
+            {
+              secondhighest = highest;
+              highest = nums[i];
+            }
+          else
+            secondhighest = nums[i];
+        }
+      
+      //second lowest
+      if(nums[i] < secondlowest)
+        {
+          if(nums[i] < lowest)
+            {
+              secondlowest = lowest;
+              lowest = nums[i];
+            }
+          else
+            {
+              secondlowest = nums[i];
+            }
+        }
+    }
+  
+  return [secondhighest, secondlowest];
+  
+}
+
+var numarr = [10,5,7,13,20,9];
+console.log(secondPlace(numarr));
