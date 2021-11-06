@@ -1,0 +1,19 @@
+
+
+var student = 
+{
+  firstname:"",
+  lastname: "",
+  ID: "",
+  courses: ["TIN", "ZPR", "SKJ", "PPJ"]
+};
+
+function IT()
+{
+  //student.call(this);
+  this.firstname = "Mike";
+  this.lastname = "Wazowski";
+  this.ID = 55;
+}
+
+IT.prototype = new student;

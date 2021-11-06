@@ -1,0 +1,15 @@
+var person = {
+  firstName: "Dee",
+  lastName: "Snuts",
+  SSN: 1337,
+  fullName: function() 
+  {
+    return this.firstName + " " + this.lastName;
+  },
+  NamesBond: function()
+  {
+    return "The names " + this.lastName + ", " + this.firstName + " " + this.lastName + ".";
+  }
+};
+
+console.log(person.NamesBond());

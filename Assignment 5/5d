@@ -1,0 +1,57 @@
+var constructor = function(firstName, lastName, id, grades)
+{
+  var student = {
+    firstName: firstName,
+    lastName: lastName,
+    ID: id,
+    grades: grades,
+    
+     get FullN()
+    {
+      return this.firstName();
+    },
+    get averageGrade()
+    {
+      var average = 0;
+      for(let i = 0; i< this.grades.length; i++)
+      {
+          average += this.grades[i];
+      }
+      average = average/(this.grades.length-1);
+      return average;
+    },
+    set fname(newfname)
+    {
+      this.firstname = newfname;
+    },
+    set lname(newlname)
+    {
+      this.lastname = newlname;
+    },
+    
+    fullName: function() 
+    {
+      return this.firstName + " " + this.lastName;
+    },
+    averageGrade: function() 
+    {
+      var average = 0;
+      for(let i = 0; i< this.grades.length; i++)
+      {
+          average += this.grades[i];
+      }
+      average = average/(this.grades.length-1);
+      return average;
+    }
+  };
+  return student;
+}
+
+var stud = constructor("Miker", "Biker", 22, [2,2,4,3,3]);
+console.log(stud.fullName());
+
+ stud.fname = 'nate';
+ stud.lname = "Yop";
+ console.log(stud.fullN);
+
+console.log(stud.averageGrade);

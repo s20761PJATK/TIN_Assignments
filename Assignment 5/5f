@@ -1,0 +1,58 @@
+class Person 
+{
+  constructor(firstname, lastname)
+  {
+    this.firstname = firstname;
+    this.lastname = lastname;
+  }
+  get getfullname()
+  {
+    return this.firstname + " " + this.lastname;
+  }
+  set setfirstname(name)
+  {
+    this.firstname = name;
+  }
+  set setlastname(name)
+  {
+    this.lastname = name;
+  }
+}
+
+
+class student  {
+  constructor(firstname, lastname, id, grades)
+    {
+      Person.call(this, firstname, lastname)
+      this.id = id;
+      this.grades = grades;
+    }
+      get fullName() 
+      {
+        return this.firstname + " " + this.lastname;
+      }
+      set setfirstname(firstname)
+      {
+        this.firstname = firstname;
+      }
+      set setlastname(lastname)
+      {
+        this.lastname = lastname;
+      }
+      get gradeAverage()
+      {
+        var average = 0;
+        for(let i = 0; i< this.grades.length; i++)
+          {
+            average += this.grades[i];
+          }
+        average = average/(this.grades.length-1);
+        return average;
+      }
+
+}
+    
+  
+
+const stud = new student("Mike", "Nop", 56, [5,3,2,3]);
+console.log(stud.fullName);
