@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SSN and EMAIL online checker (no scam 100% free legit)</title>
+</head>
+<body>
+
+<div>
+	<input name="SSNForm" type="number" maxlength="10" id="SSNForm"/>
+	<br><br>
+	<input name="EmailForm" type="text" maxlength="100" id="EmailForm"/>
+	<button onclick="CheckValidity()">Check validity</button>
+
+</div>
+<br><br><br>
+<div>
+	<script>
+		function CheckValidity()
+		{
+			var ssnres = document.getElementById('SSNForm').value;
+			var emailres = document.getElementById('EmailForm').value;
+			
+			var ssnregex = new RegExp('[0-9]{12}');
+			var emailregex = new RegExp('^\S+@\S+\.\S+$');
+			var ssntest = ssnregex.test(ssnres);
+			var emailtest = emailregex.test(emailres);
+			
+			if(emailtest == false)
+				document.getElementById("EmailForm").style.backgroundColor = "red";
+			else
+				document.getElementById("EmailForm").style.backgroundColor = "green";
+			if(ssntest == false)
+				document.getElementById("SSNForm").style.backgroundColor = "red";
+			else
+				document.getElementById("SSNForm").style.backgroundColor = "green";
+
+			
+			console.log("test");
+			
+			if(ssntest == true && emailtest == true)
+				return true;
+			else
+				return false;
+		}
+	</script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Celsius and Fahrenheit converter</title>
+</head>
+<body>
+
+<div>
+<table name = "tableused" id = "tableused" border = "1">
+	<tr>
+		<th>First table</th>
+		<th>Second table</th>
+		<th>Third table</th>
+	</tr>
+</table>
+	<br><br>
+	What would you like to add?
+	<input name="TableInput1" type="text" maxlength="20" id="TableInput1"/>
+	<input name="TableInput2" type="text" maxlength="20" id="TableInput2"/>
+	<input name="TableInput3" type="text" maxlength="20" id="TableInput3"/>
+	<br>
+	<button onclick="AddTables()">Add table</button>
+
+</div>
+<br><br><br>
+<div>
+	<script>
+		function AddTables()
+		{
+			var d1 = document.getElementById('TableInput1').value;
+			var d2 = document.getElementById('TableInput2').value;
+			var d3 = document.getElementById('TableInput3').value;
+			
+			
+			var insiderow = "<th>" +d1+ "</th>" + "<th>" +d2+ "</th>" + "<th>" +d3+ "</th>"
+			var tab = document.getElementById('tableused').getElementsByTagName('tbody')[0];
+
+			var newRow = tab.insertRow(tab.rows.length);
+			newRow.innerHTML = insiderow;
+		}
+	</script>
+
+</div>
+</body>
+</html>
