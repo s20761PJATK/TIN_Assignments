@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+   <h1>
+   Assignment 9b
+   </h1>
+   <body>
+	 <p>Number one</p>
+     <input type='text' id='num' />
+	 <p>Number Two</p>
+	 <input type='text' id='num2' />
+	 <p>Select an operator:</p>
+	  <input type="radio" id="add" name="operator" value="add">
+	  <label for="add">+</label>
+	  <input type="radio" id="sub" name="operator" value="sub">
+	  <label for="sub">-</label>
+	  <input type="radio" id="mult" name="operator" value="mult">
+	  <label for="mult">*</label>
+	  <input type="radio" id="div" name="operator" value="div">
+	  <label for="div">/</label>
+     <script>
+       function send () {
+         var number = {
+           num1: document.getElementById('num').value,
+		   num2: document.getElementById('num2').value,
+		   operator: document.querySelector('input[name="operator"]:checked').value
+		 }
+         var xhr = new window.XMLHttpRequest()
+         xhr.open('POST', '/num', true)
+         xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+         xhr.send(JSON.stringify(number))
+       }
+     </script>
+     <button type='button' value='Send' name='Send' onclick='send()' >
+       Send
+     </button>
+   </body>
+</html>
